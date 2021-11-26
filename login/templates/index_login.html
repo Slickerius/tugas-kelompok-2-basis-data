@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center">
+	<h1>Login</h1>
+	<form style="margin-left: 20vw; margin-right: 20vw;">
+		<div class="form-group" style="padding: 2vw;">
+			<label for="inputEmail">Alamat Email</label>
+			<input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Masukkan email Anda.">
+		</div>
+		<div class="form-group" style="padding: 2vw;">
+			<label for="inputPassword">Password</label>
+			<input type="password" class="form-control" id="inputPassword" placeholder="Masukkan kata sandi Anda.">
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+{% endblock content %}

@@ -1,0 +1,250 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center">
+	<h1>Registrasi</h1>
+	<div id="roleSelect">
+		<form style="margin-left: 20vw; margin-right: 20vw;">
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputEmail">Pilih Role</label>
+				<select class="form-select" id="dropdown">
+					<option selected>Role Anda...</option>
+					<option value="1">Warga</option>
+					<option value="2">Admin Sistem</option>
+					<option value="3">Panitia Penyelenggara</option>
+				</select>
+			</div>
+			<button id="submit-btn" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+	<div id="wargaForm" style="display: none;">
+		<form style="margin-left: 20vw; margin-right: 20vw;">
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputWargaEmail">Alamat Email</label>
+				<input type="email" class="form-control" id="inputWargaEmail" placeholder="Masukkan email Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputWargaPassword">Password</label>
+				<input type="password" class="form-control" id="inputWargaPassword" placeholder="Masukkan kata sandi Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputWargaNumber">Nomor HP</label>
+				<input type="text" class="form-control" id="inputWargaNumber" placeholder="Masukkan nomor HP Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputWargaNIK">NIK</label>
+				<input type="text" class="form-control" id="inputWargaNIK" placeholder="Masukkan NIK Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputWargaFullName">Nama Panjang</label>
+				<input type="text" class="form-control" id="inputWargaFullName" placeholder="Masukkan nama panjang Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputWargaSex">Jenis Kelamin</label><br/>
+				<input type="radio" id="male" value="Laki-Laki">
+  				<label for="male" style="margin-right: 1vw;">Laki-Laki</label>
+				<input type="radio" id="female" value="Perempuan" style="margin-left: 1vw;">
+  				<label for="female">Perempuan</label>
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputWargaBuildingNo">Nomor Bangunan</label>
+				<input type="text" class="form-control" id="inputWargaBuildingNo" placeholder="Masukkan nomor bangunan Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputWargaStreetNo">Nama Jalan</label>
+				<input type="text" class="form-control" id="inputWargaStreetNo" placeholder="Masukkan nama jalan Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputWargaKelurahan">Kelurahan</label>
+				<input type="text" class="form-control" id="inputWargaKelurahan" placeholder="Masukkan kelurahan Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputWargaKecamatan">Kecamatan</label>
+				<input type="text" class="form-control" id="inputWargaKecamatan" placeholder="Masukkan kecamatan Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputWargaCity">Kabupaten/Kota Administrasi</label>
+				<input type="text" class="form-control" id="inputWargaCity" placeholder="Masukkan kabupaten/kota administrasi Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="dropdownInstansi">Instansi</label>
+				<select class="form-select" id="dropdownInstansi">
+					<option selected>Pilih instansi Anda...</option>
+				</select>
+			</div>
+			<button type="submit" class="btn btn-primary" style="margin: 2vw;">Register</button>
+		</form>
+	</div>
+	<div id="adminForm" style="display: none;">
+		<form style="margin-left: 20vw; margin-right: 20vw;">
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputAdminEmail">Alamat Email</label>
+				<input type="email" class="form-control" id="inputAdminEmail" placeholder="Masukkan email Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputAdminPassword">Password</label>
+				<input type="password" class="form-control" id="inputAdminPassword" placeholder="Masukkan kata sandi Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputAdminNumber">Nomor HP</label>
+				<input type="text" class="form-control" id="inputAdminNumber" placeholder="Masukkan nomor HP Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputAdminStaffNo">Nomor Petugas</label>
+				<input type="text" class="form-control" id="inputAdminStaffNo" placeholder="Masukkan nomor petugas Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputAdminNIK">NIK</label>
+				<input type="text" class="form-control" id="inputAdminNIK" placeholder="Masukkan NIK Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputAdminFullName">Nama Panjang</label>
+				<input type="text" class="form-control" id="inputAdminFullName" placeholder="Masukkan nama panjang Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputPanitiaSex">Jenis Kelamin</label><br/>
+				<input type="radio" id="male" value="Laki-Laki">
+  				<label for="male" style="margin-right: 1vw;">Laki-Laki</label>
+				<input type="radio" id="female" value="Perempuan" style="margin-left: 1vw;">
+  				<label for="female">Perempuan</label>
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputAdminBuildingNo">Nomor Bangunan</label>
+				<input type="text" class="form-control" id="inputAdminBuildingNo" placeholder="Masukkan nomor bangunan Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputAdminStreetNo">Nama Jalan</label>
+				<input type="text" class="form-control" id="inputAdminStreetNo" placeholder="Masukkan nama jalan Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputAdminKelurahan">Kelurahan</label>
+				<input type="text" class="form-control" id="inputAdminKelurahan" placeholder="Masukkan kelurahan Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputAdminKecamatan">Kecamatan</label>
+				<input type="text" class="form-control" id="inputAdminKecamatan" placeholder="Masukkan kecamatan Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputAdminCity">Kabupaten/Kota Administrasi</label>
+				<input type="text" class="form-control" id="inputAdminCity" placeholder="Masukkan kabupaten/kota administrasi Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="dropdownInstansi">Instansi</label>
+				<select class="form-select" id="dropdownInstansi">
+					<option selected>Pilih instansi Anda...</option>
+				</select>
+			</div>
+			<button type="submit" class="btn btn-primary" style="margin: 2vw;">Register</button>
+		</form>
+	</div>
+	<div id="panitiaForm" style="display: none;">
+		<form style="margin-left: 20vw; margin-right: 20vw;">
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputPanitiaEmail">Alamat Email</label>
+				<input type="email" class="form-control" id="inputPanitiaEmail" placeholder="Masukkan email Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputPanitiaPassword">Password</label>
+				<input type="password" class="form-control" id="inputPanitiaPassword" placeholder="Masukkan kata sandi Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputPanitiaNumber">Nomor HP</label>
+				<input type="text" class="form-control" id="inputPanitiaNumber" placeholder="Masukkan nomor HP Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputAdminStaffNo">Nomor Petugas</label>
+				<input type="text" class="form-control" id="inputAdminStaffNo" placeholder="Masukkan nomor petugas Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputPanitiaFullName">Nama Panjang</label>
+				<input type="text" class="form-control" id="inputPanitiaFullName" placeholder="Masukkan nama panjang Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputPanitiaNakes">Tenaga Kesehatan</label><br/>
+				<input type="radio" name="ya" id="ya" value="Ya">
+  				<label for="ya" style="margin-right: 1vw;">Ya</label>
+				<input type="radio" name="tidak" id="tidak" value="Tidak" style="margin-left: 1vw;">
+  				<label for="tidak">Tidak</label>
+			</div>
+			<div class="form-group nakes-excl" style="padding: 2vw; display: none;">
+				<label for="inputPanitiaSTR">Nomor Surat Tanda Registrasi (STR)</label>
+				<input type="text" class="form-control" id="inputPanitiaSTR" placeholder="Masukkan nomor STR Anda.">
+			</div>
+			<div class="form-group nakes-excl" style="padding: 2vw; display: none;">
+				<label for="inputPanitiaType">Tipe Petugas</label>
+				<input type="text" class="form-control" id="inputPanitiaType" placeholder="Masukkan tipe petugas Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputPanitiaNIK">NIK</label>
+				<input type="text" class="form-control" id="inputPanitiaNIK" placeholder="Masukkan NIK Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputPanitiaSex">Jenis Kelamin</label><br/>
+				<input type="radio" id="male" value="Laki-Laki">
+  				<label for="male" style="margin-right: 1vw;">Laki-Laki</label>
+				<input type="radio" id="female" value="Perempuan" style="margin-left: 1vw;">
+  				<label for="female">Perempuan</label>
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputPanitiaBuildingNo">Nomor Bangunan</label>
+				<input type="text" class="form-control" id="inputPanitiaBuildingNo" placeholder="Masukkan nomor bangunan Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputPanitiaStreetNo">Nama Jalan</label>
+				<input type="text" class="form-control" id="inputPanitiaStreetNo" placeholder="Masukkan nama jalan Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputPanitiaKelurahan">Kelurahan</label>
+				<input type="text" class="form-control" id="inputPanitiaKelurahan" placeholder="Masukkan kelurahan Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputPanitiaKecamatan">Kecamatan</label>
+				<input type="text" class="form-control" id="inputPanitiaKecamatan" placeholder="Masukkan kecamatan Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="inputPanitiaCity">Kabupaten/Kota Administrasi</label>
+				<input type="text" class="form-control" id="inputPanitiaCity" placeholder="Masukkan kabupaten/kota administrasi Anda.">
+			</div>
+			<div class="form-group" style="padding: 2vw;">
+				<label for="dropdownInstansi">Instansi</label>
+				<select class="form-select" id="dropdownInstansi">
+					<option selected>Pilih instansi Anda...</option>
+				</select>
+			</div>
+			<button type="submit" class="btn btn-primary" style="margin: 2vw;">Register</button>
+		</form>
+	</div>
+</div>
+<script>
+	$(document).ready(() => {
+		$(`#submit-btn`).click((e) => {
+			e.preventDefault();
+			let dropdown = $(`#dropdown`)[0];
+			let choiceStr = dropdown.options[dropdown.selectedIndex].text;
+			console.log(`a`);
+			if(choiceStr === `Warga`) {
+				$(`#roleSelect`).hide();
+				$(`#wargaForm`).show();
+			} else if(choiceStr === `Admin Sistem`) {
+				$(`#roleSelect`).hide();
+				$(`#adminForm`).show();
+			} else if(choiceStr === `Panitia Penyelenggara`) {
+				$(`#roleSelect`).hide();
+				$(`#panitiaForm`).show();
+			}
+		});
+		$(`input:radio[name="ya"]`).change(function() {
+			if(this.checked && this.value == `Ya`) {
+				$(`.nakes-excl`).show();
+				$(`#tidak`).prop(`checked`, false);
+			}
+		});
+		$(`input:radio[name="tidak"]`).change(function() {
+			if(this.checked && this.value == `Tidak`) {
+				$(`.nakes-excl`).hide();
+				$(`#ya`).prop(`checked`, false);
+			}
+		});
+	});
+</script>
+{% endblock content %}
