@@ -1,0 +1,1 @@
+web gunicorn tk2basdat.wsgi --log-file -
