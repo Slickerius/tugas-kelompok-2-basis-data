@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>FORM PEMBUATAN STATUS TIKET</h1>
+
+<div class="container">
+    <label for="Kode">Kode: </label>
+    <input type="text" id="kode" name="Kode" value="auto-generate oleh sistem">
+    <br>
+      
+    <label for="nama-status">Nama Status: </label>
+    <input type="text" id="nama-status" name="nama-status" value="">
+    <br>
+
+    <button type="button" class="btn btn-primary">Tambah</button>
+</div>
+
+<script>
+	$(document).ready(() => {
+		document.title = `Status Tiket`;
+    });
+</script>
+{% endblock content %}

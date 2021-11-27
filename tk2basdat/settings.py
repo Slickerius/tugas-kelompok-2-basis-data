@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'cd_vaksin',
     'no11',
     'no12',
+    'crud_status',
 ]
 
 MIDDLEWARE = [
