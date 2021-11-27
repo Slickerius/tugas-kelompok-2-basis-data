@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'registration',
     'cr_tiket',
     'cd_vaksin',
+    'no11',
+    'no12',
 ]
 
 MIDDLEWARE = [

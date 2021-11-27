@@ -20,6 +20,8 @@ import login.urls as login
 import registration.urls as registration
 import cr_tiket.urls as cr_tiket
 import cd_vaksin.urls as cd_vaksin
+import no11.urls as no11
+import no12.urls as no12
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +30,6 @@ urlpatterns = [
     path('registration/', include(registration)),
     path('cr-tiket/', include(cr_tiket)),
     path('cd-vaksin/', include(cd_vaksin)),
+    path('ru-tiket/', include(no11)),
+    path('cr-kartu-vaksin/', include(no12)),
 ]
