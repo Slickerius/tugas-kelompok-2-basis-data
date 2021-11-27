@@ -1,8 +1,37 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="text-center">
-	<h2>Welcome to Sistem Informasi Vaksin!</h2>
-	<p>Atau dikenal juga sebagai SIVAX</p>
+<div style="text-align: center;">
+	<h2>Tambah Vaksin</h2>
+	<form style="margin-left: 20vw; margin-right: 20vw;">
+		<div style="text-align: left;" >
+			<div class="form-group" style="padding: 1vw;">
+				<label for="inputNama">Nama Vaksin</label>
+				<input type="text" class="form-control" id="inputNama">
+			</div>
+			<div class="form-group" style="padding: 1vw;">
+				<label for="inputProdusen">Produsen</label>
+				<input type="text" class="form-control" id="inputProdusen">
+			</div>
+			<div class="form-group" style="padding: 1vw;">
+				<label for="inputNoEdar">Nomor Edar</label>
+				<input type="text" class="form-control" id="inputNoEdar">
+			</div>
+			<div class="form-group" style="padding: 1vw;">
+				<label for="inputStok">Stok</label>
+				<input type="text" class="form-control" id="inputStok">
+			</div>
+			<div class="form-group" style="padding: 1vw;">
+				<label for="inputFrekuensi">Frekuensi</label>
+				<input type="text" class="form-control" id="inputFrekuensi">
+			</div>
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
 </div>
+<script>
+	$(document).ready(() => {
+		document.title = `Tambah Vaksin`;
+    });
+</script>
 {% endblock content %}
