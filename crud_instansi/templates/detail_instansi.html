@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>FORM DETAIL INSTANSI</h1>
+
+<div class="container">
+    <h4>Kode: disabled, auto-generate oleh sistem</h4>
+    <h4>Nama Instansi: disabled</h4>
+    <h4>Nomor Telepon: disabled</h4>
+    <h4>Kategori Instansi: disabled</h4>
+    <br>
+
+    <h4>Tipe Faskes: disabled</h4>
+    <h4>Status Kepemilikan: disabled</h4>
+    <br>
+    
+    <h4>Kategori Non-Faskes: disabled</h4>
+    <br>
+    <button type="button" class="btn btn-primary">Cancel</button>
+  </div>
+
+<script>
+	$(document).ready(() => {
+		document.title = `Instansi`;
+    });
+</script>
+{% endblock content %}
