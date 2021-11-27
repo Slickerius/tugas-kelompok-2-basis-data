@@ -18,10 +18,14 @@ from django.urls import path, include
 import home.urls as home
 import login.urls as login
 import registration.urls as registration
+import cr_tiket.urls as cr_tiket
+import cd_vaksin.urls as cd_vaksin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(home)),
     path('login/', include(login)),
     path('registration/', include(registration)),
+    path('cr-tiket/', include(cr_tiket)),
+    path('cd-vaksin/', include(cd_vaksin)),
 ]

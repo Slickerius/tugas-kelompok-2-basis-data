@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-%-6=-4v_fyu^7glp086yoce)zctc@kzsm&hv-cyinm)28diw%$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['sivax-a004.herokuapp.com']
 
@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'home',
     'login',
     'registration',
+    'cr_tiket',
+    'cd_vaksin',
 ]
 
 MIDDLEWARE = [

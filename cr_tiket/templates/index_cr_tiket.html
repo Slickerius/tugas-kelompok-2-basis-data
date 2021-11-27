@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center">
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">No.</th>
+				<th scope="col">Instansi Penyelenggara</th>
+				<th scope="col">Waktu Pelaksanaan</th>
+				<th scope="col">Kuota</th>
+				<th scope="col">Action</th>
+			</tr>
+		</thead>
+		<tbody>	
+			<tr>
+				<th scope="row">1</th>
+				<td>PT Bintang Pratama</td>
+				<td>18 November 2021 10:00</td>
+				<td>300</td>
+				<td><button type="button" class="btn btn-info daftar-btn" data-bs-toggle="modal" data-bs-target="#daftarModal">Daftar</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<a href="{% url 'index_tiket_saya' %}" class="btn btn-primary" role="button">Tiket Saya</a>
+	<div class="modal fade" id="daftarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Detail Jadwal</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Nama Instansi: PT Bintang Pratama</p>
+					<p>Tanggal dan Waktu Pelaksanaan: 18 November 2021 10:00</p>
+					<p>Kuota: 300</p>
+					<p>Kategori Penerima: Instansi</p>
+					<p>Lokasi Vaksin: Hot Springs Hospital Center</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary">Daftar</button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(() => {
+		document.title = `Daftar Tiket`;
+    });
+</script>
+{% endblock content %}

@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center">
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">No.</th>
+				<th scope="col">Nomor Tiket</th>
+				<th scope="col">Instansi Penyelenggara</th>
+				<th scope="col">Waktu Pelaksanaan</th>
+				<th scope="col">Status Tiket</th>
+				<th scope="col">Action</th>
+			</tr>
+		</thead>
+		<tbody>	
+			<tr>
+				<th scope="row">1</th>
+				<td>tkt01</td>
+				<td>RS Indah Permai</td>
+				<td>30 September 2021 08.00</td>
+				<td>Selesai Vaksin</td>
+				<td><button type="button" class="btn btn-info daftar-btn" data-bs-toggle="modal" data-bs-target="#detailModal1">Detail</button></td>
+			</tr>
+			<tr>
+				<th scope="row">2</th>
+				<td>tkt02</td>
+				<td>PT Bintang Pratama</td>
+				<td>18 November 2021 10.00</td>
+				<td>Terdaftar</td>
+				<td><button type="button" class="btn btn-info daftar-btn" data-bs-toggle="modal" data-bs-target="#detailModal2">Detail</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<a href="{% url 'index_cr_tiket' %}" class="btn btn-primary" role="button">Daftar</a>
+	<div class="modal fade" id="detailModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Detail Jadwal</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Nama Instansi: RS Indah Permai</p>
+					<p>Tanggal dan Waktu Pelaksanaan: 30 September 2021 08.00</p>
+					<p>Kuota: 300</p>
+					<p>Kategori Penerima: Instansi</p>
+					<p>Lokasi Vaksin: Hot Springs Hospital Center</p>
+					<p>Nomor Tiket: tkt01</p>
+					<p>Status Tiket: Selesai Vaksin</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="detailModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Detail Jadwal</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Nama Instansi: PT Bintang Pratama</p>
+					<p>Tanggal dan Waktu Pelaksanaan: 18 November 2021 10.00</p>
+					<p>Kuota: 300</p>
+					<p>Kategori Penerima: Instansi</p>
+					<p>Lokasi Vaksin: Hot Springs Hospital Center</p>
+					<p>Nomor Tiket: tkt02</p>
+					<p>Status Tiket: Terdaftar</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$(document).ready(() => {
+		document.title = `Tiket Saya`;
+    });
+</script>
+{% endblock content %}
