@@ -22,6 +22,8 @@ import cr_tiket.urls as cr_tiket
 import cd_vaksin.urls as cd_vaksin
 import no11.urls as no11
 import no12.urls as no12
+import crud_status.urls as crud_status
+import crud_instansi.urls as crud_instansi
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,4 +34,6 @@ urlpatterns = [
     path('cd-vaksin/', include(cd_vaksin)),
     path('ru-tiket/', include(no11)),
     path('cr-kartu-vaksin/', include(no12)),
+    path('status-tiket/', include(crud_status)),
+    path('instansi/', include(crud_instansi)),
 ]

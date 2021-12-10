@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>FORM TAMBAH INSTANSI</h1>
+
+<div class="container">
+    <label for="kode">Kode: </label>
+    <input type="text" id="kode" name="Kode" value="auto-generate oleh sistem">
+    <br>
+    
+    <label for="nama-instansi">Nama Instansi: </label>
+    <input type="text" id="nama-instansi" name="nama-instansi" value="">
+    <br>
+
+    <label for="nomor-telepon-instansi">Nomor Telepon: </label>
+    <input type="tel" id="nomor-telepon-instansi" name="nomor-telepon-instansi" value="">
+    <br>
+
+    <label for="kategori-instansi">Kategori Instansi: </label>
+    <select id="kategori-instansi" name="kategori-instansi">
+    <option value="faskes">Faskes</option>
+    <option value="non-faskes">Non-Faskes</option>
+    </select>
+    <br>
+
+    <label for="tipe-faskes">Tipe Faskes:</label>
+    <select id="tipe-faskes" name="tipe-faskes">
+    <option value="rumah sakit">Rumah Sakit</option>
+    <option value="puskesmas">Puskesmas</option>
+    <option value="klinik">Klinik</option>
+    </select>
+    <br>
+    
+    <label for="status-Kepemilikan">Status Kepemilikan:</label>
+    <select id="status-Kepemilikan" name="status-Kepemilikan">
+    <option value="pemerintah">Pemerintah</option>
+    <option value="swasta">Swasta</option>
+    </select>
+    <br>
+
+    <button type="button" class="btn btn-primary">Tambah</button>
+    
+  </div>
+
+<script>
+	$(document).ready(() => {
+		document.title = `Instansi`;
+    });
+</script>
+{% endblock content %}

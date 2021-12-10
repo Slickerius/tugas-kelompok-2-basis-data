@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Master Instansi</h1>
+<div class="panel-heading">
+						
+    <div class="pull-right">
+        <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+            <i class="glyphicon glyphicon-filter"></i>
+        </span>
+    </div>
+    <div id="button-lihat-status">
+        <a href="/instansi/tambah-instansi/"><button type="button" class="btn btn-primary">Tambah Instansi</button></a>
+    </div>
+</div>
+<div class="text-center">
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">No.</th>
+				<th scope="col">Kode Instansi</th>
+				<th scope="col">Nama Instansi</th>
+				<th scope="col">Tindakan</th>
+			</tr>
+		</thead>
+		<tbody>	
+			<tr>
+				<th scope="row">1</th>
+				<td>Kode Instansi 1</td>
+				<td>Nama Instansi 1</td>
+				<td>
+                    <a href="/instansi/update-instansi/">Update</a>
+                    <a href="/instansi/detail-instansi/">Detail</a>
+                    <button onclick="confirmation()">Delete</button>
+                </td>
+			</tr>
+			<tr>
+				<th scope="row">2</th>
+				<td>Kode Instansi 2</td>
+				<td>Nama Instansi 2</td>
+				<td>
+                    <a href="/instansi/update-instansi/">Update</a>
+                    <a href="/instansi/detail-instansi/">Detail</a>
+                    <button onclick="confirmation()">Delete</button>
+                </td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<script>
+	$(document).ready(() => {
+		document.title = `Instansi`;
+    });
+</script>
+{% endblock content %}
